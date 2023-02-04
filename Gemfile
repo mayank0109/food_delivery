@@ -16,7 +16,6 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 gem 'pg'
 gem 'faker'
-gem 'pry-rails'
 gem 'scenic', '~> 1.5', '>= 1.5.4'
 
 
