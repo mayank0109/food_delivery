@@ -7,6 +7,7 @@ class Orders::FrequencyController < ApplicationController
                       where("orders.created_at >= (select created_at from orders order by created_at limit 1)"). # hour series is generate for last 3 years but this 
                       select_hour_and_order_count.
                       group_by_hour.
+                      order("hour desc").
                       group_by { |record| record[:hour].to_date }
 
     render json: { frequency_data: frequency_data }, status: :ok
