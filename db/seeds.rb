@@ -13,7 +13,7 @@ end
 def create_orders_for_customers
   Customer.all.each do |customer|
     start_time = Date.today.beginning_of_day - 30.minutes #for every customer order are being created when time is form 01:30, 02:30, 03:30...
-  100.times do
+    100.times do
       customer.orders.create!(bill_number: Faker::Alphanumeric.alpha(number: 10), created_at: start_time)
       start_time = start_time - 1.hour
     end
