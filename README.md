@@ -9,9 +9,9 @@ This project contains 2 api's as per the assignment given in the interview, and 
 - Response is in the following format
   ```
     {
-      date: [
+      2023-02-05(yyyy-mm-dd): [
         {
-          hour: 2023-02-04T18:00:00.000Z,
+          hour: 11:00 PM,
           count: 72(number of order for that hour)
         }
       ]

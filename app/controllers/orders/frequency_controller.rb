@@ -8,7 +8,10 @@ class Orders::FrequencyController < ApplicationController
                       select_hour_and_order_count.
                       group_by_hour.
                       order("hour desc").
-                      group_by { |record| record[:hour].to_date }
+                      group_by { |record| record[:hour].to_date }.
+                      map do |k, v|
+                        { k => v.map {|record| {hour: record.hour.strftime("%I:%M %p"), count: record.count} } }
+                      end
 
     render json: { frequency_data: frequency_data }, status: :ok
   end
