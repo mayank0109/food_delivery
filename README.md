@@ -2,7 +2,11 @@
 
 This project contains 2 api's as per the assignment given in the interview, and below is the documentation of both api's:-
 
-## /orders/frequency
+# Host
+
+- https://food-delivery-web-serivce.onrender.com
+
+## Api - /orders/frequency
 
 - This api returns the consolidated data of number of orders per day per hour starting from the order creation.
 
@@ -18,7 +22,7 @@ This project contains 2 api's as per the assignment given in the interview, and 
     }
   ```
 
-## /repeat_customers
+## Api - /repeat_customers
 
 - The logic of repeat customer in last week is assumed as, the customer that have placed order in last week and it's his/her second order
 
